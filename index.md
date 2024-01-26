@@ -393,7 +393,7 @@ requirements! I will list some sources that have a different approach from what 
 
 # Further reading
 ### Atmosphere
-You may have noticed that the planet are missing something. Yes, they're missing an atmosphere like our own blue marble.
+You may have noticed that the planets are missing something. Yes, they're missing an atmosphere like our own blue marble.
 There are multiple ways to fake this, such as having a disc that fades out behind the planet, or adding another sphere
 on top of the terrain and clouds we already have, and adding a fading color on a texture for that sphere that just
 reaches over the edges of the planet, facing away from the camera at all times.
@@ -402,6 +402,23 @@ Or you can add in an actual atmosphere! This approach would be GPU based, but it
 It may be an entire project on its own, so thread carefully before starting on recreating a realistic atmosphere.
 
 <a href="https://www.alanzucconi.com/2017/10/10/atmospheric-scattering-3/">Alan Zucconi - Atmospheric Scattering Pt.3</a><br/>
+
+### Sources
+- [https://danielsieger.com/blog/2021/03/27/generating-spheres.html](https://danielsieger.com/blog/2021/03/27/generating-spheres.html)<br/>
+- [https://jlarsen.artstation.com/projects/OJ1GJ](https://jlarsen.artstation.com/projects/OJ1GJ)<br/>
+- [https://www.redblobgames.com/x/1938-square-tiling-of-sphere/](https://www.redblobgames.com/x/1938-square-tiling-of-sphere/)<br/>
+- [https://frozenfractal.com/blog/2023/11/2/around-the-world-1-continents/](https://frozenfractal.com/blog/2023/11/2/around-the-world-1-continents/)<br/>
+- [https://github.com/Auburn/FastNoise2](https://github.com/Auburn/FastNoise2)<br/>
+- [https://visibleearth.nasa.gov/images/57747/blue-marble-clouds](https://visibleearth.nasa.gov/images/57747/blue-marble-clouds)<br/>
+- [https://www.shadedrelief.com/natural3/pages/clouds.html](https://www.shadedrelief.com/natural3/pages/clouds.html)<br/>
+- [https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph2007-curlnoise.pdf](https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph2007-curlnoise.pdf)<br/>
+- [https://al-ro.github.io/projects/curl/](https://al-ro.github.io/projects/curl/)<br/>
+- [https://learnopengl.com/Advanced-Lighting/Normal-Mapping](https://learnopengl.com/Advanced-Lighting/Normal-Mapping)<br/>
+- [https://www.youtube.com/watch?v=lctXaT9pxA0](https://www.youtube.com/watch?v=lctXaT9pxA0)<br/>
+- [https://frozenfractal.com/blog/2023/11/2/around-the-world-1-continents/](https://frozenfractal.com/blog/2023/11/2/around-the-world-1-continents/)<br/>
+- [https://www.cs.cmu.edu/~ajw/s2007/0251-SphericalWorlds.pdf](https://www.cs.cmu.edu/~ajw/s2007/0251-SphericalWorlds.pdf)<br/>
+- [https://acko.net/blog/making-worlds-1-of-spheres-and-cubes/](https://acko.net/blog/making-worlds-1-of-spheres-and-cubes/)<br/>
+- [https://www.alanzucconi.com/2017/10/10/atmospheric-scattering-3/](https://www.alanzucconi.com/2017/10/10/atmospheric-scattering-3/)
 
 <hr/>
 <p align="center">
