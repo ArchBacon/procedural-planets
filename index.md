@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Having an interest procedural content generation and playing Stellaris with friends online, I decided that i, too, want
+Having an interest procedural content generation and playing Stellaris with friends online, I decided that I, too, want
 to generate my own planets. Joakim Larsen has made stuff for Stellaris, and has been a big inspiration in deciding that
 I do indeed want to create my own planets. He has a page on ArtStation with some of the planets that I used as a goal
 for this project. <a href="https://jlarsen.artstation.com/projects/OJ1GJ">Check out his page for yourself!</a>
@@ -33,7 +33,7 @@ example, Simplex Noise on a plane for each side of the cube. Getting things on a
 
 When normalizing the cube, the grid cells toward the center of a plane gets stretched more, thus the cells in the center
 are larger than the cells near the edges of the cube. We can try to apply a tangent adjustment to fix the problem
-somewhat. This can be show in <a href="https://www.redblobgames.com/x/1938-square-tiling-of-sphere/#appendix"> an
+somewhat. This can be shown in <a href="https://www.redblobgames.com/x/1938-square-tiling-of-sphere/#appendix"> an
 article from redblobgames</a> on the topic. Without the adjustment, you may find that the center of the planes may
 be warping the textures and such. Since there are no "poles" on a cube sphere, there is no pinching of a texture that a
 UV sphere normally suffers from.
@@ -377,7 +377,7 @@ for (int y = 0; y < height; ++y)
 }
 ```
 # Conclusion
-I hope this has given you a step i the right direction by clearing some things up, that might have been a mystery before.
+I hope this has given you a step in the right direction by clearing some things up, that might have been a mystery before.
 There are a lot of ways you can go about generating a planet depending on your needs. There are multiple sources on this
 topic, with each a different approach. Check what requirements your planets have, and find an approach that fits those
 requirements! I will list some sources that have a different approach from what I have done.
