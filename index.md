@@ -328,7 +328,7 @@ height or depth. This technique is commonly used for walls and floors, and to ad
 <img src="https://learnopengl.com/img/advanced-lighting/normal_mapping_compare.png" width="640">
 </p>
 
-[Source](https://learnopengl.com/Advanced-Lighting/Normal-Mapping)
+[Image source](https://learnopengl.com/Advanced-Lighting/Normal-Mapping)
 
 We can generate a normal map from a height map using the sobel operator. But we don't have a height map, right? All we
 have is the noise values. And we created a monochrome texture from that data before, that our height map. So each value
@@ -382,10 +382,10 @@ There are a lot of ways you can go about generating a planet depending on your n
 topic, with each a different approach. Check what requirements your planets have, and find an approach that fits those
 requirements! I will list some sources that have a different approach from what I have done.
 
-<a href="https://www.youtube.com/watch?v=lctXaT9pxA0">Sebastian Lague - Coding Adventure: Procedural Moons and Planets</a><br/>
-<a href="https://frozenfractal.com/blog/2023/11/2/around-the-world-1-continents/">Thomas ten Cate - Around The World</a><br/>
-<a href="https://www.cs.cmu.edu/~ajw/s2007/0251-SphericalWorlds.pdf">EA - Creating spherical words for Spore</a><br/>
-<a href="https://acko.net/blog/making-worlds-1-of-spheres-and-cubes/">Steven Wittens - Making worlds</a><br/>
+- <a href="https://www.youtube.com/watch?v=lctXaT9pxA0">Sebastian Lague - Coding Adventure: Procedural Moons and Planets</a><br/>
+- <a href="https://frozenfractal.com/blog/2023/11/2/around-the-world-1-continents/">Thomas ten Cate - Around The World</a><br/>
+- <a href="https://www.cs.cmu.edu/~ajw/s2007/0251-SphericalWorlds.pdf">EA - Creating spherical words for Spore</a><br/>
+- <a href="https://acko.net/blog/making-worlds-1-of-spheres-and-cubes/">Steven Wittens - Making worlds</a><br/>
 
 <p align="center">
 <img src="assets/media/final_result.gif" width="320">
