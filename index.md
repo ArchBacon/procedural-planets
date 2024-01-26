@@ -2,21 +2,17 @@
 layout: default
 ---
 
-<hr>
-Christian Delicaat - 25/01/2024
-<br/>
-Year 2 programming @ BUas Games
-<hr>
-
 Having an interest procedural content generation and playing Stellaris with friends online, I decided that i, too, want
 to generate my own planets. Joakim Larsen has made stuff for Stellaris, and has been a big inspiration in deciding that
 I do indeed want to create my own planets. He has a page on ArtStation with some of the planets that I used as a goal
 for this project. <a href="https://jlarsen.artstation.com/projects/OJ1GJ">Check out his page for yourself!</a>
 
-I don't have a lot of knowledge about rendering and writing shaders, so I can just do everything on the CPU. How hard
-can it be, right! Right?
+I don't have a lot of knowledge about rendering and writing shaders, so, as a year 2 programming student at Buas Games,
+I can just do everything on the CPU. How hard can it be, right! Right?
 
+<p align="center">
 <img src="assets/media/final_result.gif" width="320">
+</p>
 
 # Spheres!
 First up, we need a sphere. Planets are generally round, so a sphere is what we need. But what kind of sphere?
@@ -25,7 +21,9 @@ to generate different types of spheres. We will be taking a look at just 2 types
 (also know the Cube sphere). Let's break the spheres down, and see what type of sphere we need.
 
 ### Cube Sphere
+<p align="center">
 <img src="assets/media/quad_sphere_refinement.jpg" width="640">
+</p>
 
 [Image source](https://danielsieger.com/blog/2021/03/27/generating-spheres.html#the-quad-sphere)
 
@@ -45,8 +43,9 @@ planet in high detail. Using the grid system on the Cube sphere, it's possible t
 that are within view in higher detail (LOD).
 
 ### UV Sphere
+<p align="center">
 <img src="assets/media/uv_sphere_refinement.jpg" width="640">
-
+</p>
 
 [Image source](https://danielsieger.com/blog/2021/03/27/generating-spheres.html#the-uv-sphere)
 
@@ -55,7 +54,9 @@ provides since I will be viewing the planets from further away, and not from sup
 simplest form of a sphere, a UV sphere, will be enough for my use case. But there is one problem that the uv sphere has,
 that the cube sphere does not have; The UV sphere has poles... and that means texture pinching!
 
-<img src="assets/media/w2_texture_warping_on_planet_poles.png" width="170">
+<p align="center">
+<img src="assets/media/w2_texture_warping_on_planet_poles.png" width="360">
+</p>
 
 # Texture Generation
 To fix the pinching of the UV sphere, we're not going to be warping the UV sphere to eliminate the pinching. Instead,
@@ -67,7 +68,9 @@ your classroom wall is also an example of an equirectangular map. This makes cou
 russia, look a lot bigger on the map then they in actuality are. Check out <a href="https://www.thetruesize.com/">
 https://www.thetruesize.com/</a> to see how the warping affects countries on a map!
 
+<p align="center">
 <img src="assets/media/albedoTerrainTexture.png" width="360" alt="Terrain texture">
+</p>
 
 ### Spherical coordinates
 The idea is to get the coordinates of points on the sphere in 3D space. Using these coordinates we can get noise values
@@ -232,7 +235,9 @@ But curl noise needs multiple passes in order to generate this cloud-like look, 
 CPU, it would take too much time to generate a single cloud texture for a single planet. Especially if you want multiple
 planets rendered at the same time.
 
+<p align="center">
 <img src="assets/media/Random-noise-flowfield-left-and-Curl-noise-right-Line-integral-convolution-is-used.png" width="320">
+</p>
 
 [Image source](https://www.researchgate.net/figure/Random-noise-flowfield-left-and-Curl-noise-right-Line-integral-convolution-is-used_fig2_225841789)
 
@@ -241,7 +246,9 @@ results that I liked that looked realistically enough like clouds to me, densely
 
 Densely clouded:
 
+<p align="center">
 <img src="assets/media/dense_clouded.png" width="250">
+</p>
 
 ```c++
 auto fnSimplex2 = FastNoise::New<FastNoise::OpenSimplex2>();
@@ -273,7 +280,9 @@ fnScale->SetScale(1.0f);
 
 and sparsely clouded:
 
+<p align="center">
 <img src="assets/media/sparse_clouded.png" width="250">
+</p>
 
 ```c++
 const auto fnSimplex2 = FastNoise::New<FastNoise::OpenSimplex2>();
@@ -307,13 +316,17 @@ By using 4D noise, we can also shift through the 4th dimension so get the clouds
 to generate a new texture every frame, or generate a loop beforehand that can then be played. But here is what it would
 look like by generating a texture every frame.
 
+<p align="center">
 <img src="assets/media/w5_progress.gif" width="320">
+</p>
 
 # Normal Map
 Normal mapping is a technique used for faking lighting of bumps and dents this giving the illusion that an object has
 height or depth. This technique is commonly used for walls and floors, and to add details back into a simplified mesh.
 
+<p align="center">
 <img src="https://learnopengl.com/img/advanced-lighting/normal_mapping_compare.png" width="640">
+</p>
 
 [Source](https://learnopengl.com/Advanced-Lighting/Normal-Mapping)
 
@@ -323,7 +336,9 @@ from our noise data maps directly to what would be a pixel in a texture. The nor
 is "good enough" but there are better options out there, that don't necessarily use the sobel operator. <a href="https://en.wikipedia.org/wiki/Normal_mapping">
 This wikipedia page has a good read on normal mapping</a>.
 
+<p align="center">
 <img src="assets/media/normal_mapped.png" width="320">
+</p>
 
 ```c++
 int height = resolution;
@@ -372,7 +387,9 @@ requirements! I will list some sources that have a different approach from what 
 <a href="https://www.cs.cmu.edu/~ajw/s2007/0251-SphericalWorlds.pdf">EA - Creating spherical words for Spore</a><br/>
 <a href="https://acko.net/blog/making-worlds-1-of-spheres-and-cubes/">Steven Wittens - Making worlds</a><br/>
 
+<p align="center">
 <img src="assets/media/final_result.gif" width="320">
+</p>
 
 # Further reading
 ### Atmosphere
@@ -387,4 +404,6 @@ It may be an entire project on its own, so thread carefully before starting on r
 <a href="https://www.alanzucconi.com/2017/10/10/atmospheric-scattering-3/">Alan Zucconi - Atmospheric Scattering Pt.3</a><br/>
 
 <hr/>
+<p align="center">
 <img src="assets/media/BUasLogo.png" width="320">
+</p>
